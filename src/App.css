@@ -33,13 +33,30 @@
 .header {
   margin: 3rem auto 0rem;
   position: relative;
-  background-image: url("assets/headerBG.png");
+  display: flex;
+  flex-direction: column;
+  max-width: 959px;
+}
 
+.headerBgImage {
+  background-image: url("assets/headerBG.png");
+  mask: url("assets/curve.png") no-repeat center / 100% 100%;
   width: 100%;
   max-width: 959px;
   aspect-ratio: 959 / 520;
+  margin: 0 auto;
 }
 
+.curve {
+  width: 100%;
+  max-width: 959px;
+
+  aspect-ratio: 959 / 520;
+  background-color: #1E1C1D;
+  mask: url("assets/curve1.png")no-repeat right / 100% 100%;
+  z-index: 300;
+  position: absolute;
+}
 
 .headerDecorativeElem {
   display: flex;
@@ -47,11 +64,13 @@
   z-index: 100;
   transform: translateY(-15%);
   left: 5.5rem;
+  top: 0rem;
+  margin: 0 auto;
 }
 
 .header h1 {
   position: absolute;
-  z-index: 200;
+  z-index: 300;
   color: white;
   top: 50%;
   left: 5rem;

@@ -2,6 +2,7 @@ export function Header() {
     return (
         <div className="header">
             <div className="headerBgImage"></div>
+            <div className="curve"></div>
             <div className="headerDecorativeElem">
                 <div className="headerDecorativeRec1"></div>
                 <div className="headerDecorativeRec2">CULTURE&ART</div>
