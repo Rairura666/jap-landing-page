@@ -1,12 +1,14 @@
-import { TheatersElem } from "./NipTypeElem";
+import { TheatersElem } from "./TheaterElem";
+import { UkiyoElem } from "./UkiyoElem";
 
 
 export function MainInfo() {
     return (
         <div className="mainLayout">
-
-            <TheatersElem></TheatersElem>
-
+            <div className="mainLayoutLineWrapper">
+                <TheatersElem></TheatersElem>
+                <UkiyoElem></UkiyoElem>
+            </div>
         </div>
     )
 }

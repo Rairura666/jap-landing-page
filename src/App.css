@@ -1,29 +1,40 @@
+:root {}
+
+
 #root {
   display: block;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   padding-top: 2rem;
 }
 
 #navbar {
   display: flex;
-  gap: 2rem;
+
   position: sticky;
-  justify-content: center;
-  padding-left: 30%;
+  justify-content: end;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  top: 0;
   z-index: 400;
+  max-width: 62rem;
+  line-height: 4rem;
+
 }
 
 #navbar a {
   color: #A0A0A0;
   cursor: pointer;
+  background-color: white;
+  padding: 0rem 2rem;
 }
 
 #navbar .chosenA {
   text-decoration: underline;
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 0.3rem;
   text-decoration-color: #E23E32;
-  text-underline-offset: 10px;
+  text-underline-offset: 0.6rem;
   color: black;
 }
 
@@ -31,34 +42,28 @@
   color: black;
 }
 
-
-
-
-
 .header {
-  margin: 3rem auto 0rem;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 959px;
+  max-width: 75rem;
 }
 
 .headerBgImage {
   background-image: url("assets/headerBG.png");
   mask: url("assets/curve.png") no-repeat center / 100% 100%;
   width: 100%;
-  max-width: 959px;
   aspect-ratio: 959 / 520;
   margin: 0 auto;
-    background-size: cover;
+  background-size: cover;
 }
 
 .curve {
   width: 100%;
-  max-width: 959px;
   aspect-ratio: 959 / 520;
   background-color: #1E1C1D;
-  mask: url("assets/curve1.png")no-repeat right / 100% 100%;
+  mask: url("assets/curve1.png") no-repeat right / 100% 100%;
   z-index: 300;
   position: absolute;
 }
@@ -66,11 +71,10 @@
 .headerDecorativeElem {
   display: flex;
   position: absolute;
-  z-index: 100;
+  z-index: 500;
   transform: translateY(-5rem);
-  left: 5.5rem;
-  top: 0rem;
-  margin: 0 auto;
+  left: 5%;
+  top: 0;
   bottom: 25%;
 }
 
@@ -79,11 +83,11 @@
   z-index: 300;
   color: white;
   top: 50%;
-  left: 5rem;
+  left: 5%;
   transform: translateY(-70%);
   font-size: 5rem;
+  line-height: 1.2;
 }
-
 
 .header .headerH1Jap {
   color: #E23E32;
@@ -91,77 +95,88 @@
 
 .headerDecorativeRec1 {
   position: relative;
-  width: 25px;
+  width: 1.5rem;
   background-color: #1E1C1D;
-
-  top: 0px;
+  top: 0;
   bottom: 50%;
 }
 
 .headerDecorativeRec2 {
   background-color: #1E1C1D;
-  width: 120px;
-  height: 25px;
+  width: 7.5rem;
+  height: 1.5rem;
   color: white;
   position: absolute;
   z-index: 200;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
   text-align: center;
-  line-height: 25px;
+  line-height: 1.5rem;
 }
-
-
 
 .mainLayout {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -5rem;
 }
 
+.mainLayoutLineWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  box-sizing: border-box;
+  max-width: 62rem;
+}
 
 .theatersRedCircle {
   background-color: #E23E32;
-  clip-path: circle();
-  padding: 0.8rem 1rem;
+  aspect-ratio: 1;
   position: relative;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
 }
-
 
 .theatersWrapper::after {
   content: "";
-  border: 0.25rem solid #1E1C1D;
+  border: 0.20rem solid #1E1C1D;
   border-radius: 50%;
   width: 1rem;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   margin-top: 1rem;
-  transform: translateX(-8.5rem) translateY(-3.5rem);
-
+  bottom: 2rem;
+  left: 2rem;
+  position: absolute;
 }
 
 .theatersRedCircle h2 {
   color: white;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 3rem;
-  overflow-wrap: break-word;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 2rem 0 0 0;
 }
 
 .theatersRedCircle span {
   color: white;
   overflow-wrap: break-word;
-  padding: 0rem 3rem;
+  padding: 0 3rem;
   text-align: center;
-  max-width: 40%;
+  font-size: 1rem;
+  display: inline;
 }
 
 .theatersRedCircle h1 {
   color: #1E1C1D;
-  font-size: 4.5rem;
-  margin-top: 1.5rem;
+  font-size: 6rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
 .theatersWrapper {
@@ -169,12 +184,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .theatersCurveImg {
-  width: 35%;
+  width: 70%;
   height: auto;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   position: absolute;
-  top: 13rem;
+  top: 15rem;
+}
+
+.ukiyoWrapper {
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #1E1C1D;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.ukiyoFish {
+  position: absolute;
+  max-width: 3rem;
+  right: -5rem;
+  top: 10rem;
+}
+
+.ukiyoDecorativeRec {
+  width: 2rem;
+  height: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.ukiyoRedH1 {
+  color: #E23E32;
+  margin: 0;
+}
+
+.ukiyoWrapper h1 {
+  color: #A0A0A0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ukiyoDesc {
+  color: #A0A0A0;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.ukiyoPreText {
+  color: #535353;
+  margin: 0;
 }

@@ -8,11 +8,11 @@ import {MainInfo} from './MainInfo'
 function App() {
 
   return (
-    <>
+    <div className='main'>
     <NavBar></NavBar>
     <Header></Header>
     <MainInfo></MainInfo>
-    </>
+    </div>
   )
 }
 
