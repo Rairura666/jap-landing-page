@@ -1,3 +1,4 @@
+import curveImg from './assets/curve3.png';
 
 export function TheatersElem() {
     return (
@@ -7,7 +8,6 @@ export function TheatersElem() {
                 <span>The four traditional theaters from Japan - nogaku, kyogen, kabuki and bunraku.</span>
                 <h1>劇場</h1>
             </div>
-
             <svg
                 className="theatersCurveImg"
                 viewBox="0 -30 5685 215"
@@ -39,6 +39,8 @@ export function TheatersElem() {
                     strokeLinecap="round"
                 />
             </svg>
+
+
         </div>
 
     )
