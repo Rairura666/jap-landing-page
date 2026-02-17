@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0.5rem 0.5rem 0 0.5rem;
   padding-top: 2rem;
+
 }
 
 #navbar {
@@ -42,12 +43,21 @@
   color: black;
 }
 
-.header {
+.content {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 75rem;
+  width: 100%;
 }
 
 .headerBgImage {
@@ -114,12 +124,28 @@
   line-height: 1.5rem;
 }
 
+.bgImgUnderMainInfo {
+  position: absolute;
+  background-image: url("./assets/mainInfoBg.png");
+  max-width: 50rem;
+ 
+  right: 0rem;
+  width: 100%;
+  aspect-ratio: 1100 / 719;
+  margin: 0 auto;
+  background-size: cover;
+  z-index: -100;
+  transform-origin: top right;
+  transform: scale(1.15);
+}
+
 .mainLayout {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   top: -5rem;
+  z-index: 200;
 }
 
 .mainLayoutLineWrapper {
@@ -127,7 +153,6 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  gap: 1rem;
   box-sizing: border-box;
   max-width: 62rem;
 }
@@ -142,7 +167,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0;
+  margin: 0 2rem 2rem 2rem;
 }
 
 .theatersWrapper::after {
@@ -152,8 +177,8 @@
   width: 1rem;
   aspect-ratio: 1 / 1;
   margin-top: 1rem;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: 4rem;
+  left: 4rem;
   position: absolute;
 }
 
@@ -210,7 +235,7 @@
   position: absolute;
   max-width: 3rem;
   right: -5rem;
-  top: 10rem;
+  top: -1rem;
 }
 
 .ukiyoDecorativeRec {
@@ -240,4 +265,150 @@
 .ukiyoPreText {
   color: #535353;
   margin: 0;
+}
+
+.sushiBgElem {
+  background-color: white;
+  border: #E23E32 solid 0.5rem;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+
+.suchiElemIconsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.sushiContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sushiIconEight {
+  background-color: #E23E32;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  line-height: 2rem;
+  height: 2rem;
+  width: auto;
+  aspect-ratio: 1/1;
+  text-align: center;
+}
+
+.sushiIconEye {
+
+  background-color: #1E1C1D;
+  padding: 1rem;
+  height: 2rem;
+
+}
+
+.sushiChopsticks {
+  position: relative;
+  right: -4rem;
+  margin: 0;
+  width: 80%;
+  display: block;
+}
+
+.sushiBgElem h2 {
+
+  color: #1E1C1D;
+  margin: 0;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.lifeBirdWrapper {
+  width: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+.lifeBirdElemIconsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 1rem;
+  border-top: transparent solid 0.5rem;
+}
+
+.lifeBirdIcon {
+  margin-top: 3rem;
+}
+
+.travelWrapper {
+  background-color: #E2E2E2;
+  width: 50%;
+
+}
+
+
+.travelWrapper h2 {
+  color: #1E1C1D;
+  margin: 0;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.travelTextWrapper {
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.travelDesc {
+  color: black;
+  margin-top: 1rem;
+
+}
+
+.travelIconsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+}
+
+.BridgeAndFishWrapper {
+  content: "";
+  width: 50%;
+}
+
+.BridgeNotFish {
+  position: relative;
+  top: 9rem;
+  right: -13rem;
+}
+
+.fishNotBridge {
+  position: relative;
+  top: 8rem;
+  left: -5rem;
 }
