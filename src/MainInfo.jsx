@@ -4,7 +4,8 @@ import { SushiFoodElem } from "./SushiFoodElem";
 import { TheatersElem } from "./TheaterElem";
 import { TravelJapaneseElem } from "./TravelJapaneseElem";
 import { UkiyoElem } from "./UkiyoElem";
-
+import { HistoryElem } from "./HistoryElem";
+import { ModernEraElem } from "./ModernEraElem";
 
 export function MainInfo() {
     return (
@@ -21,6 +22,10 @@ export function MainInfo() {
             <div className="mainLayoutLineWrapper">
                 <BridgeAndFishElem></BridgeAndFishElem>
                 <TravelJapaneseElem></TravelJapaneseElem>
+            </div>
+            <div className="mainLayoutLineWrapper">
+                <HistoryElem></HistoryElem>
+                <ModernEraElem></ModernEraElem>
             </div>
         </div>
     )
