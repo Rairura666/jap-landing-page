@@ -8,17 +8,17 @@ export function NavBar() {
         <>
             <div id="navbar">
                 <a
-                    className={chosenElem === "main" ? "chosenA" : ""}
+                    href="#"
                     onClick={() => setChosenElem("main")}
-                >MAIN</a>
+                ><span className={chosenElem === "main" ? "chosenA" : ""}>MAIN</span></a>
                 <a
-                    className={chosenElem === "about" ? "chosenA" : ""}
+                    href="#"
                     onClick={() => setChosenElem("about")}
-                >ABOUT</a>
+                ><span className={chosenElem === "about" ? "chosenA" : ""}>ABOUT</span></a>
                 <a
-                    className={chosenElem === "contact" ? "chosenA" : ""}
+                    href="#"
                     onClick={() => setChosenElem("contact")}
-                >CONTACT</a>
+                ><span className={chosenElem === "contact" ? "chosenA" : ""}>CONTACT</span></a>
             </div>
 
         </>

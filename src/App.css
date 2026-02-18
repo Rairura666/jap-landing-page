@@ -37,6 +37,32 @@ h2 {
   cursor: pointer;
   background-color: white;
   padding: 0rem 2rem;
+  position: relative;
+
+}
+
+#navbar a span {
+  display: inline-block;
+  position: relative;
+}
+
+
+#navbar a:nth-of-type(1) span {
+  animation: navBarBlinks 0.5s ease-in 2s;
+}
+
+#navbar a:nth-of-type(2) span {
+  animation: navBarBlinks 0.5s ease-in 2.3s;
+}
+
+#navbar a:nth-of-type(3) span {
+  animation: navBarBlinks 0.5s ease-in 2.6s;
+}
+
+@keyframes navBarBlinks {
+  50% {
+    transform: translateY(-1rem);
+  }
 }
 
 #navbar .chosenA {
@@ -50,6 +76,8 @@ h2 {
 #navbar a:hover {
   color: black;
 }
+
+
 
 .content {
   margin: 0 auto;
@@ -117,21 +145,50 @@ h2 {
   background-color: #1E1C1D;
   top: 0;
   bottom: 50%;
+  transform-origin: bottom;
+  animation: decorativeElemAnimation1 0.5s ease-out 1s both;
+
+}
+
+@keyframes decorativeElemAnimation2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .headerDecorativeRec2 {
   background-color: #1E1C1D;
-  width: 9rem;
+  width: 0;
   height: 2.3rem;
   color: white;
   position: absolute;
   z-index: 200;
-  padding-left: 1rem;
-  padding-right: 1rem;
+
   text-align: center;
   line-height: 2.3rem;
   font-size: 1.3rem;
+  overflow: hidden;
+  animation: decorativeElemAnimation2 0.5s ease-in 1.5s forwards;
 }
+
+@keyframes decorativeElemAnimation1 {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+
 
 .bgImgUnderMainInfo {
   position: absolute;
@@ -189,6 +246,7 @@ h2 {
   bottom: 4rem;
   left: 4rem;
   position: absolute;
+  animation: fishFlash 3s ease-in infinite;
 }
 
 .theatersRedCircle h2 {
@@ -243,13 +301,40 @@ h2 {
   max-width: 3rem;
   right: -5rem;
   top: -1rem;
+  animation: fishFlash 3s ease-in infinite;
 }
+
+@keyframes fishFlash {
+  50% {
+    opacity: 50%;
+  }
+}
+
 
 .ukiyoDecorativeRec {
   width: 2rem;
   height: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+  transform-origin: left;
+  opacity: 50%;
+  animation: decorativeRec 3s ease-in-out infinite;
+}
+
+@keyframes decorativeRec {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(1.5);
+    opacity: 100%;
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+
 }
 
 .ukiyoRedH1 {
@@ -447,6 +532,7 @@ h2 {
   bottom: 0rem;
   left: 22rem;
   position: absolute;
+  animation: fishFlash 3s ease-in infinite;
 }
 
 .modernEraIcon {
@@ -455,7 +541,7 @@ h2 {
 }
 
 .modernEraWrapper span {
-  width:70%;
+  width: 70%;
 }
 
 footer {
