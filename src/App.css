@@ -61,7 +61,7 @@ h2 {
 
 @keyframes navBarBlinks {
   50% {
-    transform: translateY(-1rem);
+    transform: translateY(-0.8rem);
   }
 }
 
@@ -277,22 +277,15 @@ h2 {
   width: 50%;
 }
 
-.theatersCurveImg {
-  width: 70%;
-  height: auto;
-  transform: translateX(-40%);
-  position: absolute;
-  top: 14rem;
-}
+
 
 
 .waveWrapper {
   overflow: hidden;
   position: absolute;
-  top: 10rem;
+  top: 15rem;
   left: -2rem;
   width: 20rem;
-  height: 10rem;
 }
 
 .theaterCurveContainer {
@@ -300,7 +293,6 @@ h2 {
   animation: waveMove 25s linear infinite;
   position: relative;
   width: max-content;
-
 }
 
 .theaterCurve {
