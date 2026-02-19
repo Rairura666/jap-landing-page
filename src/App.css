@@ -146,7 +146,7 @@ h2 {
   top: 0;
   bottom: 50%;
   transform-origin: bottom;
-  animation: decorativeElemAnimation1 0.5s ease-out 1s both;
+  animation: decorativeElemAnimation1 0.5s ease-out 0.5s both;
 
 }
 
@@ -174,7 +174,7 @@ h2 {
   line-height: 2.3rem;
   font-size: 1.3rem;
   overflow: hidden;
-  animation: decorativeElemAnimation2 0.5s ease-in 1.5s forwards;
+  animation: decorativeElemAnimation2 0.5s ease-in 1s forwards;
 }
 
 @keyframes decorativeElemAnimation1 {
@@ -265,7 +265,7 @@ h2 {
 
 .theatersRedCircle h1 {
   color: #1E1C1D;
-  margin: 1.5rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   font-size: 6rem;
 }
 
@@ -283,6 +283,45 @@ h2 {
   transform: translateX(-40%);
   position: absolute;
   top: 14rem;
+}
+
+
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 10rem;
+  left: -2rem;
+  width: 20rem;
+  height: 10rem;
+}
+
+.theaterCurveContainer {
+  display: flex;
+  animation: waveMove 25s linear infinite;
+  position: relative;
+  width: max-content;
+
+}
+
+.theaterCurve {
+  width: 40rem;
+  flex-shrink: 0;
+}
+
+.theaterCurve1 {
+  width: 40rem;
+  flex-shrink: 0;
+
+}
+
+@keyframes waveMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-40rem);
+  }
 }
 
 .ukiyoWrapper {
@@ -303,6 +342,8 @@ h2 {
   top: -1rem;
   animation: fishFlash 3s ease-in infinite;
 }
+
+
 
 @keyframes fishFlash {
   50% {
@@ -494,7 +535,7 @@ h2 {
 
 .BridgeNotFish {
   position: relative;
-  top: 9rem;
+  top: 15rem;
   right: -13rem;
 }
 
@@ -502,6 +543,54 @@ h2 {
   position: relative;
   top: 8rem;
   left: -5rem;
+}
+
+.fishSchool {
+  position: relative;
+  width: 15rem;
+  top: 7rem;
+  left: -3rem;
+}
+
+.oneFishInSchool {
+  position: absolute;
+  max-width: 3rem;
+}
+
+.oneFishInSchool:nth-of-type(1) {
+  right: 7rem;
+  top: 3rem;
+  animation: fishFlash 3s ease-in infinite;
+}
+
+.oneFishInSchool:nth-of-type(2) {
+  right: 3rem;
+  top: 4rem;
+  animation: fishFlash 3s ease-in infinite 1s forwards;
+}
+
+.oneFishInSchool:nth-of-type(3) {
+  right: -1rem;
+  top: 9rem;
+  animation: fishFlash 3s ease-in infinite 2s forwards;
+}
+
+.oneFishInSchool:nth-of-type(4) {
+  right: 12rem;
+  top: 6rem;
+  animation: fishFlash 3s ease-in infinite forwards;
+}
+
+.oneFishInSchool:nth-of-type(5) {
+  right: 9rem;
+  top: 8rem;
+  animation: fishFlash 3s ease-in infinite 2s forwards;
+}
+
+.oneFishInSchool:nth-of-type(6) {
+  right: -3rem;
+  top: 2rem;
+  animation: fishFlash 3s ease-in infinite 1s forwards;
 }
 
 .ukiyoWrapper .historyH1White {

@@ -2,14 +2,39 @@ export function BridgeAndFishElem() {
     return (
         <div className="BridgeAndFishWrapper">
 
-            <svg className="fishNotBridge" width="15rem" viewBox="0 0 4000 1700" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* <svg className="fishNotBridge" width="15rem" viewBox="0 0 4000 1700" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2682 501C2611 501 2548 562.615 2491 601C2434 639.385 2341 699 2259 699C2177 699 2107 671.5 2063 601M2682 699C2618 699 2548 637.385 2491 599C2434 560.615 2341 501 2259 501C2177 501 2106.5 524 2063 599" stroke="black" stroke-width="3rem" stroke-linecap="round" />
                 <path d="M1457 1159C1386 1159 1323 1220.62 1266 1259C1209 1297.38 1116 1357 1034 1357C952.002 1357 882.002 1329.5 838.002 1259M1457 1357C1393 1357 1323 1295.38 1266 1257C1209 1218.62 1116 1159 1034 1159C952.002 1159 881.502 1182 838.002 1257" stroke="#D9D9D9" stroke-width="3rem" stroke-linecap="round" />
                 <path d="M1992 276C1921 276 1858 337.615 1801 376C1744 414.385 1651 474 1569 474C1487 474 1417 446.5 1373 376M1992 474C1928 474 1858 412.385 1801 374C1744 335.615 1651 276 1569 276C1487 276 1416.5 299 1373 374" stroke="#E23E32" stroke-width="3rem" stroke-linecap="round" />
                 <path d="M634.002 772C563.002 772 500.002 833.615 443.002 872C386.002 910.385 293.002 970 211.002 970C129.002 970 59.0024 942.5 15.0024 872M634.002 970C570.002 970 500.002 908.385 443.002 870C386.002 831.615 293.002 772 211.002 772C129.002 772 58.5024 795 15.0024 870" stroke="black" stroke-width="3rem" stroke-linecap="round" />
                 <path d="M3350 1299C3279 1299 3216 1360.62 3159 1399C3102 1437.38 3009 1497 2927 1497C2845 1497 2775 1469.5 2731 1399M3350 1497C3286 1497 3216 1435.38 3159 1397C3102 1358.62 3009 1299 2927 1299C2845 1299 2774.5 1322 2731 1397" stroke="black" stroke-width="3rem" stroke-linecap="round" />
                 <path d="M3798 15C3727 15 3664 76.615 3607 115C3550 153.385 3457 213 3375 213C3293 213 3223 185.5 3179 115M3798 213C3734 213 3664 151.385 3607 113C3550 74.615 3457 15 3375 15C3293 15 3222.5 38 3179 113" stroke="#949494" stroke-width="3rem" stroke-linecap="round" />
-            </svg>
+            </svg> */}
+
+            <div className="fishSchool">
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#E23E32" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#000000" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#000000" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#000000" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#D9D9D9" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+                <svg className="oneFishInSchool" viewBox="0 -10 649 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M634.002 15C563.002 15 500.002 76.615 443.002 115C386.002 153.385 293.002 213 211.002 213C129.002 213 59.0025 185.5 15.0025 115M634.002 213C570.002 213 500.002 151.385 443.002 113C386.002 74.615 293.002 15 211.002 15C129.002 15 58.5025 38 15.0025 113" stroke="#949494" stroke-width="3rem" stroke-linecap="round" />
+                </svg>
+
+            </div>
+
 
 
             <svg className="BridgeNotFish" width="30rem" viewBox="0 0 1714 726" fill="none" xmlns="http://www.w3.org/2000/svg">
