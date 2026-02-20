@@ -4,10 +4,13 @@ export function SushiFoodElem() {
             <div className="sushiBgElem">
                 <div className="suchiElemIconsRow">
                     <span className="sushiIconEight">8</span>
-                    <svg className="sushiIconEye" width="2rem" viewBox="0 0 1059 572" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M529.235 15.0333C200.735 11.5333 18.235 285.533 18.235 285.533C18.235 285.533 210.235 553.033 529.235 556.033C848.235 559.033 1040.24 285.533 1040.24 285.533C1040.24 285.533 857.735 18.5333 529.235 15.0333Z" stroke="white" stroke-width="5rem" />
-                        <circle cx="528.735" cy="284.533" r="198.5" stroke="white" stroke-width="5rem" />
-                    </svg>
+                    <div className="sushiIconEyeContainer">
+                        <svg className="sushiIconEye" width="2rem" viewBox="0 0 1059 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M529.235 15.0333C200.735 11.5333 18.235 285.533 18.235 285.533C18.235 285.533 210.235 553.033 529.235 556.033C848.235 559.033 1040.24 285.533 1040.24 285.533C1040.24 285.533 857.735 18.5333 529.235 15.0333Z" stroke="white" strokeWidth="5rem" />
+                            <circle cx="528.735" cy="284.533" r="198.5" stroke="white" strokeWidth="5rem" />
+                        </svg>
+                    </div>
+
                 </div>
 
                 <div className="sushiContentWrapper">
@@ -21,7 +24,18 @@ export function SushiFoodElem() {
 
 
 
-                    <h2>JAPANESE<br></br>SUSHI<br></br><span className="ukiyoRedH1">FOOD</span></h2>
+                    {/* <h2>JAPANESE<br></br>SUSHI<br></br><span className="ukiyoRedH1">FOOD</span></h2> */}
+
+                    <div id="sushiFoodNamesElem">
+                        <h2>JAPANESE</h2>
+                        <div id="flip">
+                            <div><div>SUSHI</div></div>
+                            <div><div>RAMEN</div></div>
+                            <div><div>TEMPURA</div></div>
+                        </div>
+                        <h2>FOOD</h2>
+
+                    </div>
 
 
                     <svg className="sushiBench" width="10rem" height="3rem" viewBox="0 0 1256 294" fill="none" xmlns="http://www.w3.org/2000/svg">

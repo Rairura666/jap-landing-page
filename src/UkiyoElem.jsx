@@ -9,8 +9,8 @@ export function UkiyoElem() {
 
 
 
-                <svg className="ukiyoFish" width="40rem" height="auto" viewBox="0 -30 649 332" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 15C86 15 149 76.615 206 115C263 153.385 356 213 438 213C520 213 590 185.5 634 115M15 213C79 213 149 151.385 206 113C263 74.615 356 15 438 15C520 15 590.5 38 634 113" stroke="black" stroke-width="3rem" stroke-linecap="round" />
+                <svg className="ukiyoFish" width="40rem"  viewBox="0 -30 649 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 15C86 15 149 76.615 206 115C263 153.385 356 213 438 213C520 213 590 185.5 634 115M15 213C79 213 149 151.385 206 113C263 74.615 356 15 438 15C520 15 590.5 38 634 113" stroke="black" strokeWidth="3rem" strokeLinecap="round" />
                 </svg>
 
             </div>

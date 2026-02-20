@@ -10,9 +10,9 @@ import { ModernEraElem } from "./ModernEraElem";
 export function MainInfo() {
     return (
         <div className="mainLayout">
-            <div className="mainLayoutLineWrapper">
-                <TheatersElem></TheatersElem>
-                <UkiyoElem></UkiyoElem>
+            <div id="about" className="mainLayoutLineWrapper">
+                    <TheatersElem></TheatersElem>
+                    <UkiyoElem></UkiyoElem>
             </div>
             <div className="mainLayoutLineWrapper">
                 <SushiFoodElem></SushiFoodElem>

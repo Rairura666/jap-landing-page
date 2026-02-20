@@ -1,12 +1,9 @@
-:root {}
-
 
 #root {
   display: block;
   margin: 0;
   padding: 0.5rem 0.5rem 0 0.5rem;
   padding-top: 2rem;
-
 }
 
 h1,
@@ -19,7 +16,6 @@ h2 {
 
 #navbar {
   display: flex;
-
   position: sticky;
   justify-content: end;
   padding-right: 2rem;
@@ -29,7 +25,6 @@ h2 {
   z-index: 400;
   max-width: 62rem;
   line-height: 4rem;
-
 }
 
 #navbar a {
@@ -38,14 +33,12 @@ h2 {
   background-color: white;
   padding: 0rem 2rem;
   position: relative;
-
 }
 
 #navbar a span {
   display: inline-block;
   position: relative;
 }
-
 
 #navbar a:nth-of-type(1) span {
   animation: navBarBlinks 0.5s ease-in 2s;
@@ -77,8 +70,6 @@ h2 {
   color: black;
 }
 
-
-
 .content {
   margin: 0 auto;
   display: flex;
@@ -86,7 +77,6 @@ h2 {
   justify-content: center;
   max-width: 75rem;
   position: relative;
-
 }
 
 .header {
@@ -187,9 +177,6 @@ h2 {
   }
 }
 
-
-
-
 .bgImgUnderMainInfo {
   position: absolute;
   background-image: url("./assets/mainInfoBg.png");
@@ -277,9 +264,6 @@ h2 {
   width: 50%;
 }
 
-
-
-
 .waveWrapper {
   overflow: hidden;
   position: absolute;
@@ -335,14 +319,11 @@ h2 {
   animation: fishFlash 3s ease-in infinite;
 }
 
-
-
 @keyframes fishFlash {
   50% {
     opacity: 50%;
   }
 }
-
 
 .ukiyoDecorativeRec {
   width: 2rem;
@@ -432,11 +413,55 @@ h2 {
   text-align: center;
 }
 
-.sushiIconEye {
-
+.sushiIconEyeContainer {
   background-color: #1E1C1D;
+  height: 4rem;
+}
+
+.sushiIconEye {
   padding: 1rem;
   height: 2rem;
+  animation: eyeAnim 3s ease-in-out infinite;
+}
+
+@keyframes eyeAnim {
+  0% {}
+
+  60% {
+    transform: scaleY(100%);
+  }
+
+  70% {
+    transform: scaleY(0%);
+  }
+
+  80% {
+    transform: scaleY(100%);
+  }
+}
+
+.cameraIconBird{
+  padding: 1rem;
+  height: 2rem;
+  animation: cameraAnim 3s ease-in-out infinite;
+}
+
+@keyframes cameraAnim{
+  20%{
+    transform: rotate(0deg);
+  }
+  28%{
+    transform: rotate(20deg);
+  }
+  44%{
+    transform: rotate(-15deg);
+  }
+  55%{
+    transform: rotate(5deg);
+  }
+  60%{
+    transform: rotate(0deg);
+  }
 
 }
 
@@ -632,4 +657,67 @@ footer {
   border-top: #dbd5d5 0.1rem solid;
   padding: 1rem 0;
   line-height: 2rem;
+}
+
+
+#sushiFoodNamesElem {
+
+  color: #999;
+  font-size: 3.5rem;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#flip {
+  height: 3.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+#flip>div>div {
+  color: #E23E32;
+  height: 3.5rem;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 7s linear infinite;
+  margin-bottom: -0.2rem;
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(-16.75rem);
+  }
+
+  5% {
+    transform: translateY(-11.5rem);
+  }
+
+  33% {
+    transform: translateY(-11.5rem);
+  }
+
+  38% {
+    transform: translateY(-6.25rem);
+  }
+
+  66% {
+    transform: translateY(-6.25rem);
+  }
+
+  71% {
+    transform: translateY(-0.5rem);
+  }
+
+  99.99% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(-16.75rem);
+  }
 }

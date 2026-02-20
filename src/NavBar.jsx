@@ -12,11 +12,11 @@ export function NavBar() {
                     onClick={() => setChosenElem("main")}
                 ><span className={chosenElem === "main" ? "chosenA" : ""}>MAIN</span></a>
                 <a
-                    href="#"
+                    href="#about"
                     onClick={() => setChosenElem("about")}
                 ><span className={chosenElem === "about" ? "chosenA" : ""}>ABOUT</span></a>
                 <a
-                    href="#"
+                    href="#contact"
                     onClick={() => setChosenElem("contact")}
                 ><span className={chosenElem === "contact" ? "chosenA" : ""}>CONTACT</span></a>
             </div>
