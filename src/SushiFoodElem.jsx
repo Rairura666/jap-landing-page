@@ -24,8 +24,6 @@ export function SushiFoodElem() {
 
 
 
-                    {/* <h2>JAPANESE<br></br>SUSHI<br></br><span className="ukiyoRedH1">FOOD</span></h2> */}
-
                     <div id="sushiFoodNamesElem">
                         <h2>JAPANESE</h2>
                         <div id="flip">

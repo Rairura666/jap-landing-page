@@ -1,10 +1,12 @@
-
 #root {
   display: block;
   margin: 0;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0;
   padding-top: 2rem;
+ 
 }
+
+
 
 h1,
 h2 {
@@ -22,17 +24,25 @@ h2 {
   box-sizing: border-box;
   margin: 0 auto;
   top: 0;
-  z-index: 400;
+  z-index: 700;
   max-width: 62rem;
   line-height: 4rem;
 }
+
+#navbar *:focus {
+  outline: none;
+}
+
+
 
 #navbar a {
   color: #A0A0A0;
   cursor: pointer;
   background-color: white;
   padding: 0rem 2rem;
+  font-weight: 500;
   position: relative;
+  -webkit-tap-highlight-color: #d7d7d762;
 }
 
 #navbar a span {
@@ -136,8 +146,14 @@ h2 {
   top: 0;
   bottom: 50%;
   transform-origin: bottom;
-  animation: decorativeElemAnimation1 0.5s ease-out 0.5s both;
+}
 
+.headerDecorativeRec1.animatedRec1 {
+  animation: decorativeElemAnimation1 0.5s ease-out 0.5s both;
+}
+
+.headerDecorativeRec2.animatedRec2 {
+  animation: decorativeElemAnimation2 0.5s ease-in 1s forwards;
 }
 
 @keyframes decorativeElemAnimation2 {
@@ -159,12 +175,10 @@ h2 {
   color: white;
   position: absolute;
   z-index: 200;
-
   text-align: center;
   line-height: 2.3rem;
   font-size: 1.3rem;
   overflow: hidden;
-  animation: decorativeElemAnimation2 0.5s ease-in 1s forwards;
 }
 
 @keyframes decorativeElemAnimation1 {
@@ -266,9 +280,9 @@ h2 {
 
 .waveWrapper {
   overflow: hidden;
-  position: absolute;
-  top: 15rem;
-  left: -2rem;
+  position: relative;
+  top: 1rem;
+  left: -8rem;
   width: 20rem;
 }
 
@@ -315,7 +329,7 @@ h2 {
   position: absolute;
   max-width: 3rem;
   right: -5rem;
-  top: -1rem;
+  top: 10rem;
   animation: fishFlash 3s ease-in infinite;
 }
 
@@ -440,26 +454,30 @@ h2 {
   }
 }
 
-.cameraIconBird{
+.cameraIconBird {
   padding: 1rem;
   height: 2rem;
   animation: cameraAnim 3s ease-in-out infinite;
 }
 
-@keyframes cameraAnim{
-  20%{
+@keyframes cameraAnim {
+  20% {
     transform: rotate(0deg);
   }
-  28%{
+
+  28% {
     transform: rotate(20deg);
   }
-  44%{
+
+  44% {
     transform: rotate(-15deg);
   }
-  55%{
+
+  55% {
     transform: rotate(5deg);
   }
-  60%{
+
+  60% {
     transform: rotate(0deg);
   }
 
@@ -547,6 +565,7 @@ h2 {
 
 .BridgeAndFishWrapper {
   content: "";
+  position: relative;
   width: 50%;
 }
 
@@ -563,7 +582,7 @@ h2 {
 }
 
 .fishSchool {
-  position: relative;
+  position: absolute;
   width: 15rem;
   top: 7rem;
   left: -3rem;
@@ -626,6 +645,7 @@ h2 {
 
 .modernEraWrapper h1 {
   margin-top: 1.5rem;
+  color: #1E1C1D;
 }
 
 .modernEraWrapper::after {
@@ -636,7 +656,7 @@ h2 {
   aspect-ratio: 1 / 1;
   margin-top: 1rem;
   bottom: 0rem;
-  left: 22rem;
+  right: 25%;
   position: absolute;
   animation: fishFlash 3s ease-in infinite;
 }
@@ -659,10 +679,7 @@ footer {
   line-height: 2rem;
 }
 
-
 #sushiFoodNamesElem {
-
-  color: #999;
   font-size: 3.5rem;
   font-weight: bold;
   width: 100%;
@@ -720,4 +737,410 @@ footer {
   100% {
     transform: translateY(-16.75rem);
   }
+}
+
+@media (max-width: 1280px) {
+  .content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 45rem;
+    position: relative;
+  }
+
+  h1,
+  h2 {
+    line-height: 2rem;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .ukiyoDesc,
+  .theatersRedCircle span {
+    font-size: 0.8rem;
+  }
+
+  .theatersRedCircle h1 {
+    font-size: 4rem;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .waveWrapper {
+    overflow: hidden;
+    position: relative;
+    top: 0rem;
+    left: -5rem;
+    width: 15rem;
+  }
+
+  .theaterCurve {
+    width: 30rem;
+  }
+
+  .theatersWrapper::after {
+    margin-top: 1rem;
+    bottom: 4rem;
+    left: 2rem;
+  }
+
+  #navbar {
+    display: flex;
+    position: sticky;
+    justify-content: end;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    top: 0;
+    max-width: 45rem;
+    line-height: 4rem;
+  }
+
+  #navbar a {
+    color: #A0A0A0;
+    cursor: pointer;
+    background-color: white;
+    padding: 0rem 1rem;
+    position: relative;
+  }
+
+
+  .header h1 {
+    position: absolute;
+    z-index: 600;
+    color: white;
+    top: 60%;
+    left: 8%;
+    transform: translateY(-70%);
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+
+  .mainLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -3rem;
+    z-index: 200;
+  }
+
+  .mainLayoutLineWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 40rem;
+  }
+
+  .ukiyoFish {
+    position: absolute;
+    max-width: 2.5rem;
+    right: -3.5rem;
+    top: 10rem;
+    animation: fishFlash 3s ease-in infinite;
+  }
+
+  .sushiIconEight {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    height: 2rem;
+    text-align: center;
+
+  }
+
+  .sushiIconEyeContainer {
+    background-color: #1E1C1D;
+    height: 2rem;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+  }
+
+  .sushiIconEye {
+    height: 1.2rem;
+    width: 2rem;
+    padding: 0.5rem 0rem;
+  }
+
+  .cameraIconBird {
+    height: 1.2rem;
+    width: 2rem;
+    padding: 0.5rem 0rem;
+  }
+
+  .sushiChopsticks {
+    position: relative;
+    right: -4rem;
+    margin: 0;
+    width: 60%;
+    height: auto;
+    display: block;
+  }
+
+  #sushiFoodNamesElem {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #flip {
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .lifeBirdIcon {
+    margin-top: 0rem;
+    width: 50%;
+  }
+
+  .sushiBgElem {
+    background-color: white;
+    border: #E23E32 solid 0.5rem;
+    padding-bottom: 1rem;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+
+  .BridgeNotFish {
+    top: 19rem;
+    right: -5rem;
+    width: 20rem;
+  }
+
+  .fishSchool {
+    transform: scale(0.8);
+    width: 15rem;
+    top: 8rem;
+    left: -4rem;
+  }
+
+  .bgImgUnderMainInfo {
+    max-width: 35rem;
+  }
+
+  .travelTextWrapper {
+    box-sizing: border-box;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .modernEraIcon {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+  }
+
+  .modernEraWrapper::after {
+    width: 1rem;
+    margin-top: 1rem;
+    bottom: 0rem;
+    right: 20%;
+  }
+
+
+
+  #sushiFoodNamesElem {
+    font-size: 2rem;
+  }
+
+  #flip div:first-child {
+    animation: showSmall 7s linear infinite;
+    margin-bottom: 0;
+    line-height: 2rem;
+  }
+
+  #flip div {
+    height: 2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+  }
+
+  #flip {
+    height: 2rem;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+  #flip>div>div {
+    color: #E23E32;
+    height: 2rem;
+    display: inline-block;
+  }
+
+  .sushiBgElem h2 {
+    margin-bottom: 0;
+  }
+
+  @keyframes showSmall {
+    0% {
+      transform: translateY(-9rem);
+    }
+
+    5% {
+      transform: translateY(-5rem);
+    }
+
+    33% {
+      transform: translateY(-5rem);
+    }
+
+    38% {
+      transform: translateY(-2rem);
+    }
+
+    66% {
+      transform: translateY(-2rem);
+    }
+
+    71% {
+      transform: translateY(0rem);
+    }
+
+    99.99% {
+      transform: translateY(0rem);
+    }
+
+    100% {
+      transform: translateY(-9rem);
+    }
+  }
+
+  @media(max-width:768px) {
+    .content span:not(.headerH1Jap):not(.ukiyoRedH1) {
+      font-size: 1rem;
+    }
+
+    .mainLayoutLineWrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mainLayoutLineWrapper>* {
+      width: 90%;
+      min-width: 18rem;
+    }
+
+    .headerDecorativeElem {
+      display: none;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+    }
+
+    #navbar {
+      justify-content: center;
+      padding: 0;
+    }
+
+    .content {
+      margin: 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 100%;
+      position: relative;
+    }
+
+
+
+
+    .header {
+      min-width: 20rem;
+    }
+
+    .mainLayout {
+      top: -1.5rem;
+    }
+
+    .theatersRedCircle {
+      aspect-ratio: 1;
+      gap: 1rem;
+      margin: 0rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .theatersRedCircle h1 {
+      font-size: 5rem;
+      margin: 1rem 0 3.5rem 0;
+    }
+
+    .waveWrapper {
+      top: 0rem;
+      left: 0rem;
+      width: 15rem;
+    }
+
+    .lifeBirdWrapper {
+      display: none;
+      position: absolute;
+    }
+
+    .BridgeAndFishWrapper {
+      display: none;
+      position: absolute;
+    }
+
+    .ukiyoFish {
+      display: none;
+    }
+
+    .modernEraIcon {
+      position: static;
+      margin-top: 1rem;
+      bottom: 0;
+      width: 40%;
+    }
+
+    .modernEraWrapper::after {
+      width: 1rem;
+      margin-top: 1rem;
+      bottom: 2rem;
+      right: 30%;
+    }
+
+    .bgImgUnderMainInfo {
+      display: none;
+    }
+
+
+  }
+
+  @media(max-width: 320px) {
+
+    .content {
+      min-width: 320px;
+      overflow-x: auto;
+    }
+
+  
+
+    .theatersWrapper::after {
+      margin-top: 0.5rem;
+      bottom: 4rem;
+      left: 1rem;
+      width: 0.8rem;
+    }
+
+    .modernEraWrapper::after {
+      width: 0.7rem;
+      margin-top: 1rem;
+      bottom: 2rem;
+      right: 30%;
+    }
+  }
+
 }
