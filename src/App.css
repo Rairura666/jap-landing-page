@@ -2,51 +2,47 @@
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 2rem;
- 
+  padding-top: 40px;
 }
-
-
 
 h1,
 h2 {
-  line-height: 3.5rem;
-  font-size: 3.5rem;
+  font-size: clamp(1rem, 4vw, 3.5rem);
+  line-height: clamp(1rem, 4vw, 3.5rem);
   margin: 0;
 }
-
 
 #navbar {
   display: flex;
   position: sticky;
-  justify-content: end;
-  padding-right: 2rem;
-  box-sizing: border-box;
-  margin: 0 auto;
   top: 0;
+  justify-content: flex-end;
+  padding-right: 10%;
+  box-sizing: border-box;
   z-index: 700;
-  max-width: 62rem;
-  line-height: 4rem;
+  line-height: clamp(2rem, 10vw, 4rem);
 }
 
 #navbar *:focus {
   outline: none;
 }
 
-
+.navWrapper {
+  background-color: white;
+}
 
 #navbar a {
   color: #A0A0A0;
   cursor: pointer;
-  background-color: white;
-  padding: 0rem 2rem;
+  padding: 0 clamp(0.3rem, 3vw, 1rem);
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
   font-weight: 500;
   position: relative;
   -webkit-tap-highlight-color: #d7d7d762;
+  text-decoration: none;
 }
 
 #navbar a span {
-  display: inline-block;
   position: relative;
 }
 
@@ -60,12 +56,6 @@ h2 {
 
 #navbar a:nth-of-type(3) span {
   animation: navBarBlinks 0.5s ease-in 2.6s;
-}
-
-@keyframes navBarBlinks {
-  50% {
-    transform: translateY(-0.8rem);
-  }
 }
 
 #navbar .chosenA {
@@ -85,7 +75,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 75rem;
+  max-width: 80%;
   position: relative;
 }
 
@@ -131,7 +121,7 @@ h2 {
   top: 60%;
   left: 8%;
   transform: translateY(-70%);
-  font-size: 8rem;
+  font-size: clamp(2rem, 10vw, 8rem);
   line-height: 1;
 }
 
@@ -141,7 +131,7 @@ h2 {
 
 .headerDecorativeRec1 {
   position: relative;
-  width: 1.5rem;
+  width: clamp(1.5rem, 2vw, 2rem);
   background-color: #1E1C1D;
   top: 0;
   bottom: 50%;
@@ -156,54 +146,31 @@ h2 {
   animation: decorativeElemAnimation2 0.5s ease-in 1s forwards;
 }
 
-@keyframes decorativeElemAnimation2 {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 9rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 .headerDecorativeRec2 {
   background-color: #1E1C1D;
   width: 0;
-  height: 2.3rem;
+  height: clamp(2.3rem, 4vw, 4rem);
   color: white;
   position: absolute;
   z-index: 200;
   text-align: center;
-  line-height: 2.3rem;
-  font-size: 1.3rem;
+  line-height: clamp(2.3rem, 4vw, 4rem);
+  font-size: clamp(0.8rem, 3vw, 2rem);
   overflow: hidden;
-}
-
-@keyframes decorativeElemAnimation1 {
-  0% {
-    transform: scaleY(0);
-  }
-
-  100% {
-    transform: scaleY(1);
-  }
 }
 
 .bgImgUnderMainInfo {
   position: absolute;
   background-image: url("./assets/mainInfoBg.png");
-  max-width: 50rem;
-
-  right: 0rem;
-  width: 100%;
-  aspect-ratio: 1100 / 719;
-  margin: 0 auto;
+  right: -9%;
+  top: 0;
+  height: 130%;
+  width: clamp(80%, 90%, 100%);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
   z-index: -100;
   transform-origin: top right;
-  transform: scale(1.15);
 }
 
 .mainLayout {
@@ -211,7 +178,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -5rem;
+  top: clamp(-5rem, -7vw, -1rem);
   z-index: 200;
 }
 
@@ -221,31 +188,38 @@ h2 {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-  max-width: 62rem;
+  max-width: 85%;
+}
+
+.mainLayoutLineWrapper:nth-of-type(2) {
+  position: relative;
 }
 
 .theatersRedCircle {
   background-color: #E23E32;
-  aspect-ratio: 1;
   position: relative;
-  border-radius: 50%;
+  border-radius: max(20%, 40rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 0 2rem 2rem 2rem;
+  gap: clamp(0.5rem, 8vw, 1rem);
+  margin: 0 clamp(0.5rem, 5vw, 2rem) clamp(0.5rem, 5vw, 2rem) clamp(0.5rem, 5vw, 2rem);
+  max-width: 80%;
+  height: 100%;
+  aspect-ratio: 1;
+  padding: clamp(1rem, 5vw, 1.5rem);
+  box-sizing: border-box;
 }
 
 .theatersWrapper::after {
   content: "";
-  border: 0.20rem solid #1E1C1D;
+  border: clamp(0.15rem, 0.2vw, 0.4rem) solid #1E1C1D;
   border-radius: 50%;
-  width: 1rem;
+  width: clamp(0.5rem, 1vw, 3rem);
   aspect-ratio: 1 / 1;
-  margin-top: 1rem;
-  bottom: 4rem;
-  left: 4rem;
+  bottom: clamp(0rem, 4vw, 5rem);
+  left: clamp(0.5rem, 4vw, 9rem);
   position: absolute;
   animation: fishFlash 3s ease-in infinite;
 }
@@ -255,19 +229,22 @@ h2 {
   margin: 2rem 0 0 0;
 }
 
+
 .theatersRedCircle span {
   color: white;
   overflow-wrap: break-word;
-  padding: 0 3rem;
   text-align: center;
   font-size: 1rem;
+  width: 80%;
   display: inline;
 }
 
 .theatersRedCircle h1 {
   color: #1E1C1D;
-  margin: 3rem 0 1rem 0;
-  font-size: 6rem;
+  font-size: clamp(2rem, 7vw, 8rem);
+  margin-bottom: clamp(1rem, 3vw, 5rem);
+  margin-top: clamp(1rem, 2vw, 2rem);
+  white-space: nowrap;
 }
 
 .theatersWrapper {
@@ -278,45 +255,45 @@ h2 {
   width: 50%;
 }
 
-.waveWrapper {
-  overflow: hidden;
+.waveWrapperAnotherOne {
   position: relative;
-  top: 1rem;
-  left: -8rem;
-  width: 20rem;
+  width: 100%;
+  height: clamp(0.5rem, 5vw, 2rem);
+}
+
+.waveWrapper {
+  overflow-x: hidden;
+  transform: translateX(clamp(-8rem, -5vw, -1rem));
+  width: 100%;
+  height: clamp(0.5rem, 5vw, 4rem);
+  max-width: clamp(80%, 20vw, 120%);
+  position: absolute;
 }
 
 .theaterCurveContainer {
   display: flex;
-  animation: waveMove 25s linear infinite;
+  animation: waveMove 10s linear infinite;
   position: relative;
   width: max-content;
+  margin: auto 0;
+  flex-shrink: 0;
 }
 
 .theaterCurve {
-  width: 40rem;
+  width: 100%;
   flex-shrink: 0;
 }
 
 .theaterCurve1 {
-  width: 40rem;
+  width: 100%;
   flex-shrink: 0;
-
 }
 
-@keyframes waveMove {
-  from {
-    transform: translateX(0);
-  }
 
-  to {
-    transform: translateX(-40rem);
-  }
-}
 
 .ukiyoWrapper {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: clamp(0.5rem, 7vw, 2rem);
   background-color: #1E1C1D;
   width: 50%;
   display: flex;
@@ -327,17 +304,14 @@ h2 {
 
 .ukiyoFish {
   position: absolute;
-  max-width: 3rem;
-  right: -5rem;
+  max-width: clamp(1rem, 3.5vw, 6rem);
+  right: clamp(-9rem, -5vw, 0rem);
   top: 10rem;
+  stroke-width: clamp(1rem, 3.5vw, 2rem);
   animation: fishFlash 3s ease-in infinite;
 }
 
-@keyframes fishFlash {
-  50% {
-    opacity: 50%;
-  }
-}
+
 
 .ukiyoDecorativeRec {
   width: 2rem;
@@ -349,21 +323,7 @@ h2 {
   animation: decorativeRec 3s ease-in-out infinite;
 }
 
-@keyframes decorativeRec {
-  0% {
-    transform: scaleX(1);
-  }
 
-  50% {
-    transform: scaleX(1.5);
-    opacity: 100%;
-  }
-
-  100% {
-    transform: scaleX(1);
-  }
-
-}
 
 .ukiyoRedH1 {
   color: #E23E32;
@@ -395,6 +355,7 @@ h2 {
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
+  padding-bottom: clamp(0.5rem, 1vw, 1rem);
 }
 
 
@@ -415,13 +376,17 @@ h2 {
   align-items: center;
 }
 
+.sushiBench {
+  width: clamp(30%, 20vw, 20rem);
+  margin-bottom: clamp(1rem, 3vw, 3rem);
+}
+
 .sushiIconEight {
   background-color: #E23E32;
-  padding: 1rem;
   color: white;
-  font-size: 2rem;
-  line-height: 2rem;
-  height: 2rem;
+  font-size: clamp(0.5rem, 4vw, 2rem);
+  line-height: clamp(1rem, 8vw, 6rem);
+  height: clamp(1rem, 8vw, 6rem);
   width: auto;
   aspect-ratio: 1/1;
   text-align: center;
@@ -429,85 +394,44 @@ h2 {
 
 .sushiIconEyeContainer {
   background-color: #1E1C1D;
-  height: 4rem;
+  line-height: clamp(1rem, 8vw, 6rem);
+  height: clamp(1rem, 8vw, 6rem);
+  aspect-ratio: 1;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sushiIconEye {
-  padding: 1rem;
-  height: 2rem;
+  width: 50%;
   animation: eyeAnim 3s ease-in-out infinite;
 }
 
-@keyframes eyeAnim {
-  0% {}
-
-  60% {
-    transform: scaleY(100%);
-  }
-
-  70% {
-    transform: scaleY(0%);
-  }
-
-  80% {
-    transform: scaleY(100%);
-  }
-}
-
 .cameraIconBird {
-  padding: 1rem;
-  height: 2rem;
+  width: 50%;
   animation: cameraAnim 3s ease-in-out infinite;
 }
 
-@keyframes cameraAnim {
-  20% {
-    transform: rotate(0deg);
-  }
-
-  28% {
-    transform: rotate(20deg);
-  }
-
-  44% {
-    transform: rotate(-15deg);
-  }
-
-  55% {
-    transform: rotate(5deg);
-  }
-
-  60% {
-    transform: rotate(0deg);
-  }
-
-}
-
 .sushiChopsticks {
-  position: relative;
-  right: -4rem;
-  margin: 0;
-  width: 80%;
-  display: block;
+  transform: translateX(20%);
+  margin-top: clamp(0.2rem, 3vw, 1rem);
+  width: clamp(5rem, 10vw, 12rem);
 }
 
 .sushiBgElem h2 {
-
   color: #1E1C1D;
   margin: 0;
-
   text-align: center;
-
   margin-bottom: 0.5rem;
 }
 
 .lifeBirdWrapper {
   width: 50%;
-  aspect-ratio: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -516,34 +440,41 @@ h2 {
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: clamp(0.5rem, 3vw, 1rem);
+  position: absolute;
   border-top: transparent solid 0.5rem;
 }
 
+.lifeBirdElemIconsRow .sushiIconEyeContainer {
+  background-color: white;
+}
+
+.lifeBirdElemIconsRow .cameraIconBird {
+  stroke: black;
+}
+
 .lifeBirdIcon {
-  margin-top: 3rem;
+  width: clamp(6rem, 15vw, 15rem);
+  height: 100%;
+  aspect-ratio: 1;
 }
 
 .travelWrapper {
   background-color: #E2E2E2;
   width: 50%;
-
 }
-
 
 .travelWrapper h1 {
   color: #1E1C1D;
   margin: 0;
-
   text-align: center;
-
   margin-bottom: 0.5rem;
 }
 
 .travelTextWrapper {
   box-sizing: border-box;
-  padding: 2rem;
-  margin-bottom: 5rem;
+  padding: clamp(0.5rem, 7vw, 2rem);
+  margin-bottom: clamp(1rem, 8vw, 5rem);
   text-align: center;
 }
 
@@ -570,9 +501,10 @@ h2 {
 }
 
 .BridgeNotFish {
-  position: relative;
-  top: 15rem;
-  right: -13rem;
+  position: absolute;
+  bottom: clamp(1rem, calc(9rem - 15.8vw), 19rem);
+  right: clamp(-16rem, calc(32rem - 11vw), -5rem);
+  width: clamp(10rem, 31vw, 27rem);
 }
 
 .fishNotBridge {
@@ -583,49 +515,24 @@ h2 {
 
 .fishSchool {
   position: absolute;
-  width: 15rem;
-  top: 7rem;
-  left: -3rem;
+  width: clamp(10rem, 16vw, 20rem);
+  top: clamp(3rem, calc(14rem - 6vw), 14rem);
+  left: clamp(-6rem, calc(0rem - 4vw), 3rem);
 }
 
-.oneFishInSchool {
+.fishSchool * {
   position: absolute;
-  max-width: 3rem;
+  stroke-width: clamp(1rem, 3.5vw, 2rem);
+  max-width: clamp(1rem, 3.5vw, 6rem);
 }
 
-.oneFishInSchool:nth-of-type(1) {
-  right: 7rem;
-  top: 3rem;
+.oneFishInSchool {}
+
+.fishSchool *:nth-child(1), .fishSchool *:nth-child(5), .fishSchool *:nth-child(4) {
   animation: fishFlash 3s ease-in infinite;
 }
 
-.oneFishInSchool:nth-of-type(2) {
-  right: 3rem;
-  top: 4rem;
-  animation: fishFlash 3s ease-in infinite 1s forwards;
-}
-
-.oneFishInSchool:nth-of-type(3) {
-  right: -1rem;
-  top: 9rem;
-  animation: fishFlash 3s ease-in infinite 2s forwards;
-}
-
-.oneFishInSchool:nth-of-type(4) {
-  right: 12rem;
-  top: 6rem;
-  animation: fishFlash 3s ease-in infinite forwards;
-}
-
-.oneFishInSchool:nth-of-type(5) {
-  right: 9rem;
-  top: 8rem;
-  animation: fishFlash 3s ease-in infinite 2s forwards;
-}
-
-.oneFishInSchool:nth-of-type(6) {
-  right: -3rem;
-  top: 2rem;
+.fishSchool *:nth-of-type(2), .fishSchool *:nth-of-type(3), .fishSchool *:nth-of-type(6) {
   animation: fishFlash 3s ease-in infinite 1s forwards;
 }
 
@@ -639,35 +546,39 @@ h2 {
   align-items: center;
   width: 50%;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: clamp(0.5rem, 7vw, 2rem);
   position: relative;
+  padding-bottom: 0;
+
 }
 
 .modernEraWrapper h1 {
   margin-top: 1.5rem;
   color: #1E1C1D;
+  text-align: center;
 }
 
 .modernEraWrapper::after {
   content: "";
-  border: 0.20rem solid #1E1C1D;
+  border: clamp(0.15rem, 0.2vw, 0.4rem) solid #1E1C1D;
   border-radius: 50%;
-  width: 1rem;
+  width: clamp(0.5rem, 1vw, 3rem);
   aspect-ratio: 1 / 1;
-  margin-top: 1rem;
-  bottom: 0rem;
-  right: 25%;
+  bottom: 0;
+  right: clamp(0rem, 3vw, 13rem);
   position: absolute;
   animation: fishFlash 3s ease-in infinite;
 }
 
 .modernEraIcon {
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+  width: clamp(8rem, 30vw, 15rem);
 }
 
 .modernEraWrapper span {
   width: 70%;
+  text-align: center;
+  margin-bottom: clamp(0.2rem, 5vw, 1rem);
 }
 
 footer {
@@ -676,11 +587,13 @@ footer {
   width: 100%;
   border-top: #dbd5d5 0.1rem solid;
   padding: 1rem 0;
-  line-height: 2rem;
+
+  line-height: clamp(1rem, 5vw, 2rem);
 }
 
 #sushiFoodNamesElem {
-  font-size: 3.5rem;
+  font-size: clamp(1rem, 4vw, 3.5rem);
+  line-height: clamp(1rem, 4vw, 3.5rem);
   font-weight: bold;
   width: 100%;
   display: flex;
@@ -688,58 +601,162 @@ footer {
   align-items: center;
 }
 
+.sushiBgElem h2:nth-child(1) {
+  margin: 0;
+  margin-top: clamp(0.5rem, 5vw, 1rem);
+}
+
 #flip {
-  height: 3.5rem;
+  height: 1em;
   overflow: hidden;
   text-align: center;
+  line-height: 1em;
 }
 
 #flip>div>div {
   color: #E23E32;
-  height: 3.5rem;
+  height: 1em;
   display: inline-block;
 }
 
 #flip div:first-child {
   animation: show 7s linear infinite;
-  margin-bottom: -0.2rem;
+
 }
 
 @keyframes show {
   0% {
-    transform: translateY(-16.75rem);
+    transform: translateY(-3em);
   }
 
   5% {
-    transform: translateY(-11.5rem);
+    transform: translateY(-2em);
   }
 
   33% {
-    transform: translateY(-11.5rem);
+    transform: translateY(-2em);
   }
 
   38% {
-    transform: translateY(-6.25rem);
+    transform: translateY(-1em);
   }
 
   66% {
-    transform: translateY(-6.25rem);
+    transform: translateY(-1em);
   }
 
   71% {
-    transform: translateY(-0.5rem);
+    transform: translateY(0em);
   }
 
-  99.99% {
-    transform: translateY(-0.5rem);
+  99.9999% {
+    transform: translateY(0em);
   }
 
   100% {
-    transform: translateY(-16.75rem);
+    transform: translateY(-3em);
   }
 }
 
-@media (max-width: 1280px) {
+@keyframes decorativeElemAnimation2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: auto;
+    padding-left: clamp(0.5rem, 2vw, 1rem);
+    padding-right: clamp(0.5rem, 2vw, 1rem);
+  }
+}
+
+@keyframes cameraAnim {
+  20% {
+    transform: rotate(0deg);
+  }
+
+  28% {
+    transform: rotate(20deg);
+  }
+
+  44% {
+    transform: rotate(-15deg);
+  }
+
+  55% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+}
+
+@keyframes eyeAnim {
+  0% {}
+
+  60% {
+    transform: scaleY(100%);
+  }
+
+  70% {
+    transform: scaleY(0%);
+  }
+
+  80% {
+    transform: scaleY(100%);
+  }
+}
+
+@keyframes decorativeRec {
+  0% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(1.5);
+    opacity: 100%;
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fishFlash {
+  50% {
+    opacity: 50%;
+  }
+}
+
+@keyframes decorativeElemAnimation1 {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes navBarBlinks {
+  50% {
+    transform: translateY(-0.8rem);
+  }
+}
+
+@keyframes waveMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* @media (max-width: 1280px) {
   .content {
     margin: 0 auto;
     display: flex;
@@ -1018,107 +1035,153 @@ footer {
       transform: translateY(-9rem);
     }
   }
-
-  @media(max-width:768px) {
-    .content span:not(.headerH1Jap):not(.ukiyoRedH1) {
-      font-size: 1rem;
-    }
-
-    .mainLayoutLineWrapper {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .mainLayoutLineWrapper>* {
-      width: 90%;
-      min-width: 18rem;
-    }
-
-    .headerDecorativeElem {
-      display: none;
-    }
-
-    .header h1 {
-      font-size: 3rem;
-    }
-
-    #navbar {
-      justify-content: center;
-      padding: 0;
-    }
-
-    .content {
-      margin: 0 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 100%;
-      position: relative;
-    }
+*/
 
 
-
-
-    .header {
-      min-width: 20rem;
-    }
-
-    .mainLayout {
-      top: -1.5rem;
-    }
-
-    .theatersRedCircle {
-      aspect-ratio: 1;
-      gap: 1rem;
-      margin: 0rem 2.5rem 2.5rem 2.5rem;
-    }
-
-    .theatersRedCircle h1 {
-      font-size: 5rem;
-      margin: 1rem 0 3.5rem 0;
-    }
-
-    .waveWrapper {
-      top: 0rem;
-      left: 0rem;
-      width: 15rem;
-    }
-
-    .lifeBirdWrapper {
-      display: none;
-      position: absolute;
-    }
-
-    .BridgeAndFishWrapper {
-      display: none;
-      position: absolute;
-    }
-
-    .ukiyoFish {
-      display: none;
-    }
-
-    .modernEraIcon {
-      position: static;
-      margin-top: 1rem;
-      bottom: 0;
-      width: 40%;
-    }
-
-    .modernEraWrapper::after {
-      width: 1rem;
-      margin-top: 1rem;
-      bottom: 2rem;
-      right: 30%;
-    }
-
-    .bgImgUnderMainInfo {
-      display: none;
-    }
-
-
+@media(max-width:768px) {
+  .content span:not(.headerH1Jap):not(.ukiyoRedH1):not(.sushiIconEight) {
+    font-size: clamp(0.5rem, 5vw, 1rem);
   }
 
+  h1,
+  h2 {
+    font-size: clamp(1rem, 8vw, 3.5rem);
+    line-height: clamp(1rem, 8vw, 3.5rem);
+    margin: 0;
+  }
+
+  #flip {
+    margin: 0;
+    font-size: clamp(1rem, 8vw, 3.5rem);
+    line-height: clamp(1rem, 8vw, 3.5rem);
+  }
+
+  footer {
+    font-size: clamp(0.5rem, 5vw, 1rem);
+  }
+
+  #root {
+    padding-top: 0px;
+  }
+
+  .mainLayoutLineWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainLayoutLineWrapper>* {
+    width: 95%;
+  }
+
+  .headerDecorativeElem {
+    display: none;
+  }
+
+  #navbar a {
+    padding: 0rem clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+
+  #navbar {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .content {
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+
+  .travelTextWrapper {
+    box-sizing: border-box;
+    padding: clamp(0.5rem, 7vw, 2rem);
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .header h1 {
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    font-size: clamp(1.5rem, 10vw, 8rem);
+  }
+
+  .mainLayout {
+    top: clamp(-1.5rem, -7vw, -0.5rem);
+  }
+
+
+  .waveWrapper {
+    transform: translateX(0);
+    max-width: 100%;
+  }
+
+  .lifeBirdWrapper {
+    display: none;
+    position: absolute;
+  }
+
+  .BridgeAndFishWrapper {
+    display: none;
+    position: absolute;
+  }
+
+  .ukiyoFish {
+    display: none;
+  }
+
+  .modernEraIcon {
+    margin-top: auto;
+    width: clamp(8rem, 30vw, 10rem);
+  }
+
+
+  .bgImgUnderMainInfo {
+    display: none;
+  }
+
+  .navbar {
+    padding-right: 0rem;
+  }
+
+  .sushiChopsticks {
+    display: none;
+  }
+
+  .theatersWrapper::after {
+    border: clamp(0.15rem, 0.5vw, 1rem) solid #1E1C1D;
+    width: clamp(0.5rem, 2vw, 3rem);
+    bottom: clamp(1rem, 7vw, 5rem);
+    left: clamp(1rem, 7vw, 8rem);
+  }
+
+  .modernEraWrapper::after {
+    right: clamp(0rem, 12vw, 10rem);
+  }
+
+  .theatersRedCircle {
+    aspect-ratio: inherit;
+  }
+
+  .theatersRedCircle h1 {
+    color: #1E1C1D;
+    font-size: clamp(2rem, 8vw, 10rem);
+    margin-bottom: clamp(1rem, 3vw, 5rem);
+    white-space: nowrap;
+  }
+}
+
+/* 
   @media(max-width: 320px) {
 
     .content {
@@ -1126,7 +1189,10 @@ footer {
       overflow-x: auto;
     }
 
-  
+
+    .navbar {
+      padding-right:0rem ;
+    }
 
     .theatersWrapper::after {
       margin-top: 0.5rem;
@@ -1141,6 +1207,6 @@ footer {
       bottom: 2rem;
       right: 30%;
     }
-  }
+  }  */
 
-}
+/* } */

@@ -16,9 +16,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
   margin: 0;
- 
+
 }
