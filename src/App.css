@@ -17,10 +17,9 @@ h2 {
   position: sticky;
   top: 0;
   justify-content: flex-end;
-  padding-right: 10%;
   box-sizing: border-box;
   z-index: 700;
-  line-height: clamp(2rem, 10vw, 4rem);
+  line-height: clamp(2rem, 15vw, 4rem);
 }
 
 #navbar *:focus {
@@ -29,6 +28,7 @@ h2 {
 
 .navWrapper {
   background-color: white;
+  margin-right: 10%;
 }
 
 #navbar a {
@@ -42,9 +42,6 @@ h2 {
   text-decoration: none;
 }
 
-#navbar a span {
-  position: relative;
-}
 
 #navbar a:nth-of-type(1) span {
   animation: navBarBlinks 0.5s ease-in 2s;
@@ -60,9 +57,9 @@ h2 {
 
 #navbar .chosenA {
   text-decoration: underline;
-  text-decoration-thickness: 0.3rem;
+  text-decoration-thickness: clamp(0.1rem, 1vw, 0.3rem);
   text-decoration-color: #E23E32;
-  text-underline-offset: 0.6rem;
+  text-underline-offset: clamp(0.3rem, 2vw, 0.6rem);
   color: black;
 }
 
@@ -226,15 +223,14 @@ h2 {
 
 .theatersRedCircle h2 {
   color: white;
-  margin: 2rem 0 0 0;
+  margin: clamp(0.5rem,10vw,2rem) 0 0 0;
 }
-
 
 .theatersRedCircle span {
   color: white;
   overflow-wrap: break-word;
   text-align: center;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 5vw, 1rem);
   width: 80%;
   display: inline;
 }
@@ -289,8 +285,6 @@ h2 {
   flex-shrink: 0;
 }
 
-
-
 .ukiyoWrapper {
   box-sizing: border-box;
   padding: clamp(0.5rem, 7vw, 2rem);
@@ -311,8 +305,6 @@ h2 {
   animation: fishFlash 3s ease-in infinite;
 }
 
-
-
 .ukiyoDecorativeRec {
   width: 2rem;
   height: 0.5rem;
@@ -322,8 +314,6 @@ h2 {
   opacity: 50%;
   animation: decorativeRec 3s ease-in-out infinite;
 }
-
-
 
 .ukiyoRedH1 {
   color: #E23E32;
@@ -348,7 +338,7 @@ h2 {
 
 .sushiBgElem {
   background-color: white;
-  border: #E23E32 solid 0.5rem;
+  border: #E23E32 solid clamp(0.2rem, 1vw, 0.5rem);
   width: 50%;
   position: relative;
   display: flex;
@@ -385,8 +375,8 @@ h2 {
   background-color: #E23E32;
   color: white;
   font-size: clamp(0.5rem, 4vw, 2rem);
-  line-height: clamp(1rem, 8vw, 6rem);
-  height: clamp(1rem, 8vw, 6rem);
+  line-height: clamp(1rem, 10vw, 6rem);
+  height: clamp(1rem, 10vw, 6rem);
   width: auto;
   aspect-ratio: 1/1;
   text-align: center;
@@ -394,8 +384,8 @@ h2 {
 
 .sushiIconEyeContainer {
   background-color: #1E1C1D;
-  line-height: clamp(1rem, 8vw, 6rem);
-  height: clamp(1rem, 8vw, 6rem);
+  line-height: clamp(1rem, 10vw, 6rem);
+  height: clamp(1rem, 10vw, 6rem);
   aspect-ratio: 1;
   width: auto;
   display: flex;
@@ -442,7 +432,7 @@ h2 {
   width: 100%;
   margin-top: clamp(0.5rem, 3vw, 1rem);
   position: absolute;
-  border-top: transparent solid 0.5rem;
+  border-top: transparent solid clamp(0.2rem, 1vw, 0.5rem);
 }
 
 .lifeBirdElemIconsRow .sushiIconEyeContainer {
@@ -528,11 +518,15 @@ h2 {
 
 .oneFishInSchool {}
 
-.fishSchool *:nth-child(1), .fishSchool *:nth-child(5), .fishSchool *:nth-child(4) {
+.fishSchool *:nth-child(1),
+.fishSchool *:nth-child(5),
+.fishSchool *:nth-child(4) {
   animation: fishFlash 3s ease-in infinite;
 }
 
-.fishSchool *:nth-of-type(2), .fishSchool *:nth-of-type(3), .fishSchool *:nth-of-type(6) {
+.fishSchool *:nth-of-type(2),
+.fishSchool *:nth-of-type(3),
+.fishSchool *:nth-of-type(6) {
   animation: fishFlash 3s ease-in infinite 1s forwards;
 }
 
@@ -587,7 +581,6 @@ footer {
   width: 100%;
   border-top: #dbd5d5 0.1rem solid;
   padding: 1rem 0;
-
   line-height: clamp(1rem, 5vw, 2rem);
 }
 
@@ -756,288 +749,6 @@ footer {
   }
 }
 
-/* @media (max-width: 1280px) {
-  .content {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 45rem;
-    position: relative;
-  }
-
-  h1,
-  h2 {
-    line-height: 2rem;
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  .ukiyoDesc,
-  .theatersRedCircle span {
-    font-size: 0.8rem;
-  }
-
-  .theatersRedCircle h1 {
-    font-size: 4rem;
-    margin: 2rem 0 3rem 0;
-  }
-
-  .waveWrapper {
-    overflow: hidden;
-    position: relative;
-    top: 0rem;
-    left: -5rem;
-    width: 15rem;
-  }
-
-  .theaterCurve {
-    width: 30rem;
-  }
-
-  .theatersWrapper::after {
-    margin-top: 1rem;
-    bottom: 4rem;
-    left: 2rem;
-  }
-
-  #navbar {
-    display: flex;
-    position: sticky;
-    justify-content: end;
-    padding-right: 2rem;
-    box-sizing: border-box;
-    margin: 0 auto;
-    top: 0;
-    max-width: 45rem;
-    line-height: 4rem;
-  }
-
-  #navbar a {
-    color: #A0A0A0;
-    cursor: pointer;
-    background-color: white;
-    padding: 0rem 1rem;
-    position: relative;
-  }
-
-
-  .header h1 {
-    position: absolute;
-    z-index: 600;
-    color: white;
-    top: 60%;
-    left: 8%;
-    transform: translateY(-70%);
-    font-size: 5rem;
-    line-height: 1;
-  }
-
-
-  .mainLayout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: -3rem;
-    z-index: 200;
-  }
-
-  .mainLayoutLineWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 40rem;
-  }
-
-  .ukiyoFish {
-    position: absolute;
-    max-width: 2.5rem;
-    right: -3.5rem;
-    top: 10rem;
-    animation: fishFlash 3s ease-in infinite;
-  }
-
-  .sushiIconEight {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    height: 2rem;
-    text-align: center;
-
-  }
-
-  .sushiIconEyeContainer {
-    background-color: #1E1C1D;
-    height: 2rem;
-    aspect-ratio: 1;
-    padding: 0.5rem;
-  }
-
-  .sushiIconEye {
-    height: 1.2rem;
-    width: 2rem;
-    padding: 0.5rem 0rem;
-  }
-
-  .cameraIconBird {
-    height: 1.2rem;
-    width: 2rem;
-    padding: 0.5rem 0rem;
-  }
-
-  .sushiChopsticks {
-    position: relative;
-    right: -4rem;
-    margin: 0;
-    width: 60%;
-    height: auto;
-    display: block;
-  }
-
-  #sushiFoodNamesElem {
-    font-size: 2rem;
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #flip {
-    height: 2rem;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .lifeBirdIcon {
-    margin-top: 0rem;
-    width: 50%;
-  }
-
-  .sushiBgElem {
-    background-color: white;
-    border: #E23E32 solid 0.5rem;
-    padding-bottom: 1rem;
-    width: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-items: center;
-  }
-
-
-  .BridgeNotFish {
-    top: 19rem;
-    right: -5rem;
-    width: 20rem;
-  }
-
-  .fishSchool {
-    transform: scale(0.8);
-    width: 15rem;
-    top: 8rem;
-    left: -4rem;
-  }
-
-  .bgImgUnderMainInfo {
-    max-width: 35rem;
-  }
-
-  .travelTextWrapper {
-    box-sizing: border-box;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .modernEraIcon {
-    position: absolute;
-    bottom: 0;
-    width: 60%;
-  }
-
-  .modernEraWrapper::after {
-    width: 1rem;
-    margin-top: 1rem;
-    bottom: 0rem;
-    right: 20%;
-  }
-
-
-
-  #sushiFoodNamesElem {
-    font-size: 2rem;
-  }
-
-  #flip div:first-child {
-    animation: showSmall 7s linear infinite;
-    margin-bottom: 0;
-    line-height: 2rem;
-  }
-
-  #flip div {
-    height: 2rem;
-    margin-bottom: 1rem;
-    line-height: 2rem;
-  }
-
-  #flip {
-    height: 2rem;
-    overflow: hidden;
-    text-align: center;
-    margin-bottom: 0rem;
-  }
-
-  #flip>div>div {
-    color: #E23E32;
-    height: 2rem;
-    display: inline-block;
-  }
-
-  .sushiBgElem h2 {
-    margin-bottom: 0;
-  }
-
-  @keyframes showSmall {
-    0% {
-      transform: translateY(-9rem);
-    }
-
-    5% {
-      transform: translateY(-5rem);
-    }
-
-    33% {
-      transform: translateY(-5rem);
-    }
-
-    38% {
-      transform: translateY(-2rem);
-    }
-
-    66% {
-      transform: translateY(-2rem);
-    }
-
-    71% {
-      transform: translateY(0rem);
-    }
-
-    99.99% {
-      transform: translateY(0rem);
-    }
-
-    100% {
-      transform: translateY(-9rem);
-    }
-  }
-*/
-
-
 @media(max-width:768px) {
   .content span:not(.headerH1Jap):not(.ukiyoRedH1):not(.sushiIconEight) {
     font-size: clamp(0.5rem, 5vw, 1rem);
@@ -1078,10 +789,16 @@ footer {
   }
 
   #navbar a {
-    padding: 0rem clamp(1rem, 5vw, 2rem);
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    padding: 0rem clamp(0.3rem, 3vw, 2rem);
+    font-size: clamp(0.5rem, 4vw, 1.2rem);
   }
 
+  .navWrapper{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
   #navbar {
     justify-content: center;
@@ -1180,33 +897,3 @@ footer {
     white-space: nowrap;
   }
 }
-
-/* 
-  @media(max-width: 320px) {
-
-    .content {
-      min-width: 320px;
-      overflow-x: auto;
-    }
-
-
-    .navbar {
-      padding-right:0rem ;
-    }
-
-    .theatersWrapper::after {
-      margin-top: 0.5rem;
-      bottom: 4rem;
-      left: 1rem;
-      width: 0.8rem;
-    }
-
-    .modernEraWrapper::after {
-      width: 0.7rem;
-      margin-top: 1rem;
-      bottom: 2rem;
-      right: 30%;
-    }
-  }  */
-
-/* } */
