@@ -223,7 +223,7 @@ h2 {
 
 .theatersRedCircle h2 {
   color: white;
-  margin: clamp(0.5rem,10vw,2rem) 0 0 0;
+  margin: clamp(0.5rem, 10vw, 2rem) 0 0 0;
 }
 
 .theatersRedCircle span {
@@ -307,9 +307,9 @@ h2 {
 
 .ukiyoDecorativeRec {
   width: 2rem;
-  height: 0.5rem;
+  height: clamp(0.3rem, 1vw, 0.5rem);
   background-color: white;
-  margin-top: 2rem;
+  margin-top: clamp(1rem, 5vw, 2rem);
   transform-origin: left;
   opacity: 50%;
   animation: decorativeRec 3s ease-in-out infinite;
@@ -793,7 +793,7 @@ footer {
     font-size: clamp(0.5rem, 4vw, 1.2rem);
   }
 
-  .navWrapper{
+  .navWrapper {
     margin: 0;
     width: 100%;
     display: flex;
@@ -892,8 +892,8 @@ footer {
 
   .theatersRedCircle h1 {
     color: #1E1C1D;
-    font-size: clamp(2rem, 8vw, 10rem);
-    margin-bottom: clamp(1rem, 3vw, 5rem);
+    font-size: clamp(2rem, 12vw, 10rem);
+    margin-bottom: clamp(1rem, 4vw, 5rem);
     white-space: nowrap;
   }
 }
